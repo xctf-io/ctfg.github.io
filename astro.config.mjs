@@ -8,7 +8,7 @@ import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://sparkling-gumption-1ce980.netlify.app/",
+  site: "https://mcpshsf.com/",
   integrations: [tailwind(), image({
     serviceEntryPoint: "@astrojs/image/sharp"
   }), svelte()],
