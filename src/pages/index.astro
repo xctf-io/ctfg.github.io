@@ -1,0 +1,105 @@
+---
+import "@fontsource/inter/variable.css";
+import WhyHsf from "~/components/why-hsf.astro";
+import Faq from "~/components/faq.astro";
+import Footer from "~/components/footer.astro";
+import Header from "~/components/header.astro";
+import Intro from "~/components/intro.astro";
+import PastComps from "~/components/past-comps.astro";
+import Splash from "~/components/splash.astro";
+import Sponsors from "~/components/sponsors.astro";
+import "~/styles/index.css";
+
+const { generator, site } = Astro;
+const image = new URL("images/social.png", site);
+const description =
+  "MCPS HSF is a cybersecurity competition for student by students. Both new and experienced students in MCPS are welcome to participate!";
+---
+
+<!DOCTYPE html>
+<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+  <style>
+    body {
+      --sb-track-color: transparent;
+      --sb-thumb-color: #6b7280;
+      --sb-size: 5px;
+      scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+      scroll-behavior: smooth;
+    }
+
+    body::-webkit-scrollbar {
+      width: var(--sb-size);
+    }
+
+    body::-webkit-scrollbar-track {
+      background: var(--sb-track-color);
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background: var(--sb-thumb-color);
+      border-radius: 10px;
+    }
+
+  </style>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="generator" content={generator} />
+
+  <title>MCPSHSF</title>
+  <meta name="description" content={description} />
+
+  <!-- social media -->
+  <meta property="og:title" content="MCPS HSF" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={image} />
+  <meta property="og:url" content={site} />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- initialize theme -->
+  <script is:inline>
+    const themeSaved = localStorage.getItem("theme");
+
+    if (themeSaved) {
+      document.documentElement.dataset.theme = themeSaved;
+    } else {
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+    }
+
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (event) => {
+        if (!localStorage.getItem("theme")) {
+          document.documentElement.dataset.theme = event.matches
+            ? "dark"
+            : "light";
+        }
+      });
+  </script>
+
+  <body
+    class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
+  >
+    <Header />
+    <Splash />
+    <div class="space-y-[10vh] px-8 pt-[20vh] pb-[10vh]">
+      <Intro />
+      <WhyHsf />
+      <PastComps />
+      <Sponsors />
+      <Faq />
+    </div>
+    <Footer />
+  </body>
+</html>
