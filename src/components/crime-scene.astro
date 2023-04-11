@@ -1,0 +1,132 @@
+---
+import { Picture } from "@astrojs/image/components";
+import crimeScene from "~/assets/crime-scene.png";
+import glass from "~/assets/glass.png";
+const widths = [450, 800, 1200];
+const sizes = "55vw";
+---
+
+<div class="relative pt-8">
+    <div id="crime-scene">
+        <Picture id="crime-image" src={crimeScene} alt="Crime Scene" widths={widths} sizes={sizes} class="bg-white" />
+    </div>
+    <img id="glass" src="images/glass.png" alt="Glass" class="absolute top-0 left-[-3%] w-[35%]" />
+</div>
+<style>
+#crime-scene {
+    clip-path: circle(12% at 12% 17%);
+}
+:root {
+    --glass-top: 1px;
+}
+@keyframes crime-scene {
+    0% {
+        clip-path: circle(12% at 12% 17%)
+    }
+    10% {
+        clip-path: circle(12% at 25% 33%)
+    }
+    20% {
+        clip-path: circle(12% at 45% 17%)
+    }
+    30% {
+        clip-path: circle(12% at 75% 30%)
+    }
+    40% {
+        clip-path: circle(12% at 85% 17%)
+    }
+    50% {
+        clip-path: circle(12% at 82% 60%)
+    }
+    60% {
+        clip-path: circle(12% at 80% 83%)
+    }
+    70% {
+        clip-path: circle(12% at 60% 70%)
+    }
+    80% {
+        clip-path: circle(12% at 35% 80%)
+    }
+    90% {
+        clip-path: circle(12% at 16% 60%)
+    }
+    100% {
+        clip-path: circle(12% at 12% 17%)
+    }
+}
+@keyframes glass {
+    0% {
+        top: var(--glass-top);
+        left: -3%;
+    }
+    10% {
+        top: calc(var(--glass-top) + 5.4vw);
+        left: 10.25%;
+    }
+    20% {
+        top: var(--glass-top);
+        left: 30%;
+    }
+    30% {
+        top: calc(var(--glass-top) + 4.6vw);
+        left: 60%;
+    }
+    40% {
+        top: var(--glass-top);
+        left: 70%;
+    }
+    50% {
+        top: calc(var(--glass-top) + 14.75vw);
+        left: 67%;
+    }
+    60% {
+        top: calc(var(--glass-top) + 22.75vw);
+        left: 65%;
+    }
+    70% {
+        top: calc(var(--glass-top) + 18.4vw);
+        left: 45%;
+    }
+    80% {
+        top: calc(var(--glass-top) + 21.85vw);
+        left: 20%;
+    }
+    90% {
+        top: calc(var(--glass-top) + 14.75vw);
+        left: 1%;
+    }
+    100% {
+        top: var(--glass-top);
+        left: -3%;
+    }
+
+}
+#crime-scene {
+    animation: crime-scene 20s ease-in-out infinite;
+}
+#glass {
+    animation: glass 20s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+    #crime-scene {
+        animation: none;
+        clip-path: none;
+    }
+    #glass {
+        animation: none;
+        visibility: hidden;
+    }
+}
+</style>
+<script>
+const updateGlass = () => {
+    const glass = document.getElementById('glass');
+    const width = window.innerWidth;
+    const glassTop = (33 - 0.025 * width) + 'px';
+    glass.style.top = glassTop;
+    const root = document.querySelector(':root');
+    root.style.setProperty('--glass-top', glassTop);
+}
+updateGlass();
+window.addEventListener('resize', updateGlass);
+</script>
