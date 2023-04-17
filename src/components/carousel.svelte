@@ -1,5 +1,5 @@
 <script>
-  import { fly, scale, fade } from "svelte/transition";
+  import { scale, fade } from "svelte/transition";
   import { quintOut } from "svelte/easing";
 
   const gallery_items = [
