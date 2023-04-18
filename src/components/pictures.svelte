@@ -21,7 +21,7 @@
 {#each [images[index]] as item (index)}
     <img
         id="hsf"
-        class="object-cover rounded-2xl w-0 sm:w-1/3"
+        class="object-cover rounded-2xl w-0 md:w-1/3"
         in:fade = {{ duration: 1000, easing: quintOut }}
         src={item}
         alt="People at MCPS HSF"
