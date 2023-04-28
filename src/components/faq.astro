@@ -9,19 +9,19 @@ const features: Array<FAQItem> = [
       "An HSF is a flavor of a CTF. The challenges are connected to a theme, and the goal is not to get the most flags, but to create the most convincing writeup."
   },
   {
-    question: "Do I need experience?",
+    question: "What is a writeup?",
     answer:
-      "No! This competition has a variety of challenges for all skill levels. Also, winners are determined by the writeup, not the number of flags."
+      "A writeup is a collection of all the evidence and flags you have collected, and how you found them. Check out b1c's excellent writeup for MCPS HSF 2023."
   },
   {
     question: "What are the divisions?",
     answer:
-      "The competition is divided into a novice and advanced division. The novice division is for beginners, and the advanced division is for more experienced hackers."
+      "The competition is divided into a novice and advanced division. The novice division is for beginners, and the advanced division is for experts."
   },
   {
-    question: "What is the theme?",
+    question: "Do I need experience?",
     answer:
-      "It varies from year to year, but we've had competitions based on murder mysteries, kidnappings, and more."
+      "No! This competition is for people for all skill levels. Also, winners are determined by the writeup and number of flags."
   },
   {
     question: "Are there prizes?",
@@ -39,13 +39,23 @@ const features: Array<FAQItem> = [
   <Fragment slot="lead">
     <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-4 lg:gap-4">
       {
-        features.map(({ question, answer }) => (
+        features.map(({ question, answer }) => {return question != "What is a writeup?" ? 
           <li class="flex flex-col items-center gap-2 border border-primary p-4 md:rounded-lg lg:rounded-lg">
             <p class="text-center font-extrabold text-xl">{question}</p>
             <p class="text-center text-offset text-sm">{answer}</p>
           </li>
-        ))
+          :
+          <li class="flex flex-col items-center gap-2 border border-primary p-4 md:rounded-lg lg:rounded-lg">
+            <p class="text-center font-extrabold text-xl">What is a writeup?</p>
+            <p class="text-center text-offset text-sm">A writeup is a collection of all the evidence and flags you have collected, and how you found them. Check out b1c's <a id="writeup" class="text-primary underline" href="pdfs/b1c_HSFReport.pdf">excellent writeup</a> for MCPS HSF 2023.</p>
+          </li>
+        })
       }
     </ul>
   </Fragment>
 </ContentSection>
+<style>
+  #writeup {
+    text-underline-offset: 6px;
+  }
+</style>
