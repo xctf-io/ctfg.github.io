@@ -2,7 +2,7 @@
 a,
 .btn {
   @apply transition-colors duration-200;
-  @apply hover:text-gray-50;
+  @apply hover:text-default;
 }
 
 .gradient-text {
