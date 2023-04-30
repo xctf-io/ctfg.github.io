@@ -5,7 +5,7 @@ export interface Props {
 }
 
 const { title, id } = Astro.props;
-let space_class ="flex scroll-mt-24 flex-col items-center gap-4 space-y-"
+let space_class ="flex scroll-mt-24 flex-col items-center gap-4 relative z-10 space-y-"
 if (id === "faq") {
   space_class = space_class + "0";
 } else {
