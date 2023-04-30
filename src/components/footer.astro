@@ -2,56 +2,88 @@
 import { Icon } from "astro-icon";
 import HeroImage from "~/components/hero-image.astro";
 import type { FooterLink } from "~/types";
+import { Picture } from "@astrojs/image/components";
+import starsImage from "~/assets/starry.png";
 
 const links: Array<FooterLink> = [
-  {
-    url: "#",
-    description: "This website",
-    icon: "mdi:home",
-  },
-  {
-    url: "https://github.com/CTFg/",
-    description: "Our projects",
-    icon: "fa-brands:github-alt",
-  },
-  {
-    url: "https://discord.gg/bzRjJSFndW",
-    description: "Discord",
-    icon: "fa-brands:discord",
-  }
+	{
+		url: "#",
+		description: "This website",
+		icon: "mdi:home",
+	},
+	{
+		url: "https://github.com/CTFg/",
+		description: "Our projects",
+		icon: "fa-brands:github-alt",
+	},
+	{
+		url: "https://discord.gg/bzRjJSFndW",
+		description: "Discord",
+		icon: "fa-brands:discord",
+	},
 ];
+const widths = [450, 800, 1200];
+const sizes = "30vw";
 ---
 
-<footer class="relative flex overflow-hidden h-40 sm:h-64 items-center justify-center">
-  <div class="absolute top-0 opacity-70">
-    <HeroImage />
-  </div>
-  <div class="relative grid grid-rows-2 grid-cols-1 gap-2 sm:gap-4 mt-8 sm:mt-16">
-  <ul class="flex flex-row items-center justify-center">
-    {
-      links.map((link) => (
-        <li>
-          <a
-            class="flex mx-2 h-14 w-14 sm:h-20 sm:w-20 hover:text-primary hover:border-primary rounded-full border-2 border-current p-4"
-            href={link.url}
-          >
-            <span class="sr-only">{link.description}</span>
-            <Icon class="h-full" name={link.icon} />
-          </a>
-        </li>
-      ))
-    }
-  </ul>
-  <p id="foot" class="text-center text-default w-[75%] translate-x-[17%]">MCPS HSF is fiscally sponsored by Hack Club Bank, a project by The Hack Foundation (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).</p>
-  </div>
-  <style>
-    #foot {
-      font-size: x-small;
-    }
-    @media (min-width: 640px) {
-      #foot {
-        font-size: medium;
-      }
-    }
-  </style>
+	<Picture
+		class="absolute h-[95%] left-0 right-0 m-auto -translate-y-[550px] w-full"
+		src={starsImage}
+		alt="Stars"
+		sizes={sizes}
+		widths={widths}
+	/>
+  <Picture
+		class="absolute h-[95%] left-0 right-0 m-auto -translate-y-[750px] w-full rotate-160 opacity-60"
+		src={starsImage}
+		alt="Stars"
+		sizes={sizes}
+		widths={widths}
+	/>
+  <Picture
+  class="absolute h-[95%] left-0 right-0 m-auto -translate-y-[1000px] w-full rotate-135 opacity-20"
+  src={starsImage}
+  alt="Stars"
+  sizes={sizes}
+  widths={widths}
+/>
+<footer
+	class="relative flex overflow-hidden h-40 sm:h-64 items-center justify-center"
+>
+	<div class="absolute top-0 opacity-70">
+		<HeroImage />
+	</div>
+	<div
+		class="relative grid grid-rows-2 grid-cols-1 gap-2 sm:gap-4 mt-8 sm:mt-16"
+	>
+		<ul class="flex flex-row items-center justify-center">
+			{
+				links.map((link) => (
+					<li>
+						<a
+							class="flex mx-2 h-14 w-14 sm:h-20 sm:w-20 hover:text-primary hover:border-primary rounded-full border-2 border-current p-4"
+							href={link.url}
+						>
+							<span class="sr-only">{link.description}</span>
+							<Icon class="h-full" name={link.icon} />
+						</a>
+					</li>
+				))
+			}
+		</ul>
+		<p id="foot" class="text-center text-default w-[75%] translate-x-[17%]">
+			MCPS HSF is fiscally sponsored by Hack Club Bank, a project by The Hack
+			Foundation (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).
+		</p>
+	</div>
 </footer>
+<style>
+	#foot {
+		font-size: x-small;
+	}
+	@media (min-width: 640px) {
+		#foot {
+			font-size: medium;
+		}
+	}
+</style>
