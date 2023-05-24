@@ -2,12 +2,10 @@
 import { Icon } from "astro-icon";
 import HeroImage from "~/components/hero-image.astro";
 import type { FooterLink } from "~/types";
-import { Picture } from "@astrojs/image/components";
-import starsImage from "~/assets/starry.png";
 
 const links: Array<FooterLink> = [
 	{
-		url: "mailto:chris.thompson1612@gmail.com",
+		url: "mailto:chris@breadchris.com",
 		description: "Email",
 		icon: "uiw:mail",
 	},
@@ -22,33 +20,7 @@ const links: Array<FooterLink> = [
 		icon: "fa-brands:discord",
 	},
 ];
-const widths = [450, 800, 1200];
-const sizes = "30vw";
 ---
-
-<div class="z-5">
-	<Picture
-		class="absolute h-[95%] left-0 right-0 m-auto rotate-180 -translate-y-[550px] w-full"
-		src={starsImage}
-		alt="Stars"
-		sizes={sizes}
-		widths={widths}
-	/>
-  <Picture
-		class="absolute h-[95%] left-0 right-0 m-auto -translate-y-[750px] w-full rotate-160 opacity-60"
-		src={starsImage}
-		alt="Stars"
-		sizes={sizes}
-		widths={widths}
-	/>
-  <Picture
-  class="absolute h-[95%] left-0 right-0 m-auto -translate-y-[1000px] w-full rotate-135 opacity-30"
-  src={starsImage}
-  alt="Stars"
-  sizes={sizes}
-  widths={widths}
-/>
-</div>
 <footer
 	class="relative flex overflow-hidden h-40 sm:h-64 items-center justify-center text-white"
 >
