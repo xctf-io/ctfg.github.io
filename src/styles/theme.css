@@ -1,25 +1,25 @@
 [data-theme="light"] {
-  --color-primary: theme("colors.orange.500");
-  --color-secondary: theme("colors.amber.500");
-  --color-text: theme("colors.black");
-  --color-text-offset: theme("colors.gray.700");
-  --color-text-offset-two: theme("colors.gray.800");
-  --color-background: theme("colors.gray.50");
-  --color-background-offset: theme("colors.gray.100");
-  --color-background-highlight: theme("colors.gray.200");
+  --color-primary: rgb(201, 162, 39);
+  --color-selection: rgba(180, 213, 254, 0.5);
+  --color-secondary: rgb(235, 235, 235);
+  --color-secondary-transparent: rgba(235, 235, 235, 0.8);
+  --color-offset: rgb(177, 189, 183);
+  --color-accent: rgb(255, 114, 71);
+  --color-text: rgb(10, 10, 10);
+  --color-icon: theme("colors.gray.400");
+  --color-background: rgb(252, 252, 252);
   --color-border: theme("colors.gray.900" / 10%);
-  --color-border-contrast: theme("colors.gray.400")
 }
 
 [data-theme="dark"] {
-  --color-primary: theme("colors.orange.400");
-  --color-secondary: theme("colors.amber.600");
-  --color-text: theme("colors.gray.50");
-  --color-text-offset: theme("colors.gray.400");
-  --color-text-offset-two: theme("colors.gray.300");
-  --color-background: theme("colors.black");
-  --color-background-offset: theme("colors.gray.900");
-  --color-background-highlight: theme("colors.gray.700");
+  --color-primary: rgb(245, 203, 92);
+  --color-selection: rgba(105, 155, 216, 0.5);
+  --color-secondary: rgb(48, 48, 48);
+  --color-secondary-transparent: rgba(48, 48, 48, 0.8);
+  --color-offset: rgb(78, 78, 78);
+  --color-accent: rgb(255, 114, 71);
+  --color-text: rgb(252, 252, 252);
+  --color-icon: rgb(252, 252, 252);
+  --color-background: rgb(10, 10, 10);
   --color-border: theme("colors.gray.50" / 10%);
-  --color-border-contrast: theme("colors.gray.600")
 }

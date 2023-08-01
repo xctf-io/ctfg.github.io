@@ -1,18 +1,17 @@
 ---
 import { Icon } from "astro-icon";
-import HeroImage from "~/components/hero-image.astro";
 import type { FooterLink } from "~/types";
 
 const links: Array<FooterLink> = [
 	{
 		url: "mailto:chris@breadchris.com",
 		description: "Email",
-		icon: "uiw:mail",
+		icon: "mdi:email",
 	},
 	{
 		url: "https://github.com/CTFg/",
 		description: "Our projects",
-		icon: "fa-brands:github-alt",
+		icon: "mdi:github",
 	},
 	{
 		url: "https://discord.gg/bzRjJSFndW",
@@ -22,20 +21,14 @@ const links: Array<FooterLink> = [
 ];
 ---
 <footer
-	class="relative flex overflow-hidden h-40 sm:h-64 items-center justify-center text-white"
+	class="text-white flex flex-col items-center text-default"
 >
-	<div class="absolute top-0">
-		<HeroImage />
-	</div>
-	<div
-		class="relative grid grid-rows-2 grid-cols-1 gap-2 sm:gap-4 mt-8 sm:mt-16"
-	>
-		<ul class="flex flex-row items-center justify-center">
+		<ul class="flex flex-row items-center justify-center mb-2">
 			{
 				links.map((link) => (
 					<li>
 						<a
-							class="flex mx-2 h-14 w-14 sm:h-20 sm:w-20 hover:text-primary hover:border-primary rounded-full border-2 border-current p-4"
+							class="flex h-16 w-16 sm:h-20 sm:w-20 hover:text-primary p-4"
 							href={link.url}
 						>
 							<span class="sr-only">{link.description}</span>
@@ -45,19 +38,9 @@ const links: Array<FooterLink> = [
 				))
 			}
 		</ul>
-		<p id="foot" class="text-center w-[75%] translate-x-[17%]">
-			MCPS HSF is fiscally sponsored by Hack Club Bank, a project by The Hack
-			Foundation (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).
+		<p class="text-center text-offset text-xs xs:text-sm font-light mb-8 xs:mb-12">
+			Fiscally sponsored by The Hack Foundation <br />
+			Nonprofit EIN: 81-2908499
 		</p>
 	</div>
 </footer>
-<style>
-	#foot {
-		font-size: x-small;
-	}
-	@media (min-width: 640px) {
-		#foot {
-			font-size: medium;
-		}
-	}
-</style>

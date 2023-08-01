@@ -6,30 +6,38 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["InterVariable", ...defaultTheme.fontFamily.sans],
+        heading: ["Unbounded Variable", "sans-serif"],
       },
       colors: {
+        bg: "var(--color-background)",
+        text: "var(--color-text)",
+        selection: "var(--color-selection)",
         primary: "var(--color-primary)",
         secondary: "var(--color-secondary)",
+        semitransparent: "var(--color-secondary-transparent)",
+        accent: "var(--color-accent)",
       },
       textColor: {
         default: "var(--color-text)",
+        invert: "var(--color-background)",
         offset: "var(--color-text-offset)",
-        two: "var(--color-text-offset-two)",
+        icon: "var(--color-icon)",
       },
       backgroundColor: {
         default: "var(--color-background)",
-        offset: "var(--color-background-offset)",
-        highlight: "var(--color-background-highlight)",
+        button: "var(--color-secondary)",
+        primary: "var(--color-primary)",
+        offset: "var(--color-offset)",
       },
       borderColor: {
         default: "var(--color-border)",
-        contrast: "var(--color-border-contrast)",
-        primary: "var(--color-primary)",
-        highlight: "var(--color-text)",
       },
       screens: {
         xs: "480px",
-      }
+      },
+      dropShadow: {
+        title: "0 2px 6px var(--color-primary)",
+      },
     },
   },
   corePlugins: {

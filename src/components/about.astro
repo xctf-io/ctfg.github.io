@@ -1,0 +1,53 @@
+---
+import { Picture } from "@astrojs/image/components";
+import hsf1 from "~/assets/hsf-people.png";
+const widths = [450, 800, 1200];
+const sizes = "(min-width: 1024px) 37vw, 85vw";
+---
+
+<div
+	id="about"
+	class="flex flex-col lg:grid lg:grid-cols-2 gap-4 md:gap-8 h-full w-full py-20 justify-content-center items-center"
+>
+	<div
+		class="mx-8 lg:ml-32 px-8 lg:mx-0 flex gap-4 flex-col bg-semitransparent rounded-2xl"
+	>
+		<span
+			class="pt-6 text-md xs:text-xl xl:text-3xl font-semibold font-heading"
+		>
+			<span class="border-b-8 border-b-primary">More</span> than a CTF
+		</span>
+		<p class="text-xs xs:text-md 2xl:text-lg font-light">
+			CTFs are awesome for honing your cyber skills, but let's face it: they're
+			not always a true reflection of real-life challenges. It's time to change
+			that.
+		</p>
+		<p class="text-xs xs:text-md 2xl:text-lg font-light">
+			MCPS HSF is designed to be more realistic, with the winning teams chosen
+			based on their score and writeup. We want to see <span
+				class="text-primary font-normal">how you think</span
+			>, not just how fast you can solve a problem.
+		</p>
+		<p class="text-xs xs:text-md 2xl:text-lg font-light pb-8">
+			And fun? We've got that covered too! Each year's competition revolves
+			around a <span class="text-primary font-normal">mystery</span> and there's
+			always at least one physical challenge (last year it was lockpicking).
+		</p>
+	</div>
+	<Picture
+		class="rounded-2xl"
+		src={hsf1}
+		sizes={sizes}
+		widths={widths}
+		alt="HSF People"
+	/>
+</div>
+
+<style>
+	#about {
+		background-image: radial-gradient(theme("colors.text") 1%, transparent 2%),
+			radial-gradient(theme("colors.text") 1%, transparent 2%);
+		background-position: 0 0, 50px 50px;
+		background-size: 100px 100px;
+	}
+</style>
