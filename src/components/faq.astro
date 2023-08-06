@@ -1,5 +1,6 @@
 ---
 import type { FAQItem } from "~/types";
+import { Accordion, AccordionItem } from "accessible-astro-components";
 
 const features: Array<FAQItem> = [
 	{
@@ -35,29 +36,35 @@ const features: Array<FAQItem> = [
 ];
 ---
 
+<Accordion>
 <ul
-	class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-4 lg:gap-4 md:px-0 px-4"
+	class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-4 lg:gap-4 md:px-0 px-4 dynamic"
 >
 	{
 		features.map(({ question, answer }) => {
 			return question != "What is a writeup?" ? (
-				<li class="flex flex-col items-center gap-2 border border-primary p-4 md:rounded-lg lg:rounded-lg">
-					<p class="text-center font-extrabold text-xl">{question}</p>
-					<p class="text-center text-offset text-sm">{answer}</p>
-				</li>
+			
+					<div class="flex flex-col items-center p-2 border border-primary md:rounded-lg lg:rounded-lg"> 
+						<AccordionItem header={question}>
+							<p class="text-center text-offset text-sm">{answer}</p>
+						</AccordionItem>
+					</div>
 			) : (
-				<li class="flex flex-col items-center gap-2 border border-primary p-4 md:rounded-lg lg:rounded-lg">
-					<p class="text-center font-extrabold text-xl">What is a writeup?</p>
-					<p class="text-center text-offset text-sm">
-						A writeup is a collection of all the evidence and flags you have
-						collected, and how you found them. Check out b1c's{" "}
-						<a class="text-primary underline" href="pdfs/b1c_HSFReport.pdf">
-							excellent writeup
-						</a>{" "}
-						for MCPS HSF 2023.
-					</p>
-				</li>
+					<div class="flex flex-col items-center p-2 border border-primary md:rounded-lg lg:rounded-lg"> 
+						<AccordionItem header="What is a writeup?">
+							<p class="text-center text-offset text-sm">
+								A writeup is a collection of all the evidence and flags you have
+								collected, and how you found them. Check out b1c's{" "}
+								<a class="text-primary underline" href="pdfs/b1c_HSFReport.pdf">
+									excellent writeup
+								</a>{" "}
+								for MCPS HSF 2023.
+							</p>
+						</AccordionItem>
+					</div>
 			);
 		})
 	}
+	
 </ul>
+</Accordion>
