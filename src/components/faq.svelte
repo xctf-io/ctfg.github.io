@@ -118,9 +118,8 @@
 					<a
 						class="text-primary underline hover:decoration-wavy underline-offset-4"
 						href="pdfs/b1c_HSFReport.pdf"
-					>
-						excellent writeup
-					</a>{" "}
+					>excellent writeup
+					</a>
 					for MCPS HSF 2023.
 				</p>
 			</li>

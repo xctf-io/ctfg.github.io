@@ -10,10 +10,7 @@
 		.flat();
 </script>
 
-<a
-	class="relative hover:scale-100"
-	href="https://bank.hackclub.com/donations/start/mcps-hsf"
->
+<div class="relative">
 	<div id="seal" class="relative h-56 md:h-64 mt-4 md:mt-8 animate-spin-slow">
 		{#each array as char, index}
 			<div
@@ -25,23 +22,34 @@
 			</div>
 		{/each}
 	</div>
-	<div
-		class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[46%] md:-translate-y-[43%] hover:scale-110 hover:bg-red-600/20 border border-red-600/40 hover:border-red-600/80 hover:p-14 hover:md:p-20 hover:animate-pulse rounded-full p-12 md:p-16 ease-out transition-all duration-500"
-        on:mouseenter={() => {
-            document.getElementById("seal").style.animationPlayState = "paused";
-        }}
-        on:mouseleave={() => {
-            document.getElementById("seal").style.animationPlayState = "running";
-        }}
-        
-    >
+	<a
+		class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[46%] md:-translate-y-[43%] hover:scale-110 hover:bg-red-600/20 border border-red-600/40 hover:border-red-600/80 hover:p-14 hover:md:p-20 hover:animate-pulse rounded-full p-12 md:p-16 ease-out transition-all duration-500"
+		on:mouseenter={() => {
+			document.getElementById("seal").style.animationPlayState = "paused";
+		}}
+		on:mouseleave={() => {
+			document.getElementById("seal").style.animationPlayState = "running";
+		}}
+		href="https://bank.hackclub.com/donations/start/mcps-hsf"
+	>
 		<Icon class="w-24 h-24 text-red-600" icon="mdi:heart" />
+	</a>
+	<div class="hidden md:block opacity-75">
+		<Icon
+			class="absolute top-1/2 right-8 -translate-y-[46%] md:-translate-y-[43%] w-48 h-24"
+			icon="fa:long-arrow-left"
+		/>
+		<Icon
+			class="absolute top-1/2 left-8 -translate-y-[46%] md:-translate-y-[43%] w-48 h-24"
+			icon="fa:long-arrow-right"
+		/>
 	</div>
-</a>
+</div>
 
 <style>
 	#char {
 		transform: translateX(-50%) rotate(var(--angle));
-        text-shadow: 0 0 2px var(--color-background), 0 0 5px var(--color-background), 0 0 10px var(--color-glow);
+		text-shadow: 0 0 2px var(--color-background),
+			0 0 5px var(--color-background), 0 0 10px var(--color-glow);
 	}
 </style>
