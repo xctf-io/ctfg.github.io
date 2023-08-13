@@ -151,18 +151,18 @@ const socialLinks: Array<FooterLink> = [
 	openNavButton.addEventListener("click", openMenu);
 	closeNavButton.addEventListener("click", closeMenu);
 
-	var prevScrollpos = window.scrollY;
+	var prevScrollPos = window.scrollY;
 
 	document.addEventListener("scroll", () => {
 		var currentScrollPos = window.scrollY;
 
-		if (prevScrollpos <= currentScrollPos || currentScrollPos === 0) {
+		if (prevScrollPos <= currentScrollPos || currentScrollPos === 0) {
 			header.classList.remove("fixed-header");
 		} else {
 			header.classList.add("fixed-header");
 		}
 
-		prevScrollpos = currentScrollPos;
+		prevScrollPos = currentScrollPos;
 	});
 
 	menu.addEventListener("click", (event) => {
@@ -183,9 +183,21 @@ const socialLinks: Array<FooterLink> = [
 <style>
 	.fixed-header {
 		@apply fixed top-0 bottom-auto;
-		@apply border-default bg-default opacity-95;
+		@apply border-default bg-default;
+		animation: slideDown 0.25s linear;
+	}
+	.no-header {
+		animation: slideUp 0.25s linear;
 	}
 	.modal.is-open {
 		@apply block;
+	}
+	@keyframes slideDown {
+		0% {
+			transform: translateY(-100%);
+		}
+		100% {
+			transform: translateY(0);
+		}
 	}
 </style>
