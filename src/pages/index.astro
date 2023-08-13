@@ -1,12 +1,13 @@
 ---
 import "@fontsource/inter/variable.css";
 import "@fontsource-variable/unbounded";
-import Faq from "~/components/faq.astro";
+import Faq from "~/components/faq.svelte";
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
 import Splash from "~/components/splash.astro";
 import "~/styles/index.css";
 import About from "~/components/about.astro";
+import Sponsors from "~/components/sponsors.astro";
 
 const { generator, site } = Astro;
 const image = new URL("images/social.png", site);
@@ -67,9 +68,10 @@ const description =
 	>
 		<Header />
 		<Splash />
-		<div class="flex flex-col items-center gap-16 pt-32 pb-16 w-full">
+		<div class="flex flex-col items-center gap-12 md:gap-16 lg:gap-20 pt-32 pb-8 md:pb-16 w-full">
 			<About />
-			<Faq />
+			<Sponsors />
+			<Faq client:idle />
 		</div>
 		<Footer />
 	</body>

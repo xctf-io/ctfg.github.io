@@ -1,0 +1,16 @@
+---
+import SponsorButton from "./sponsor-button.svelte";
+---
+
+<div class="flex flex-col gap-4 text-center">
+	<span id="sponsors" class="font-heading font-semibold">
+		<span class="text-5xl border-x-8 border-dashed border-x-primary px-8">
+			Sponsors
+		</span>
+	</span>
+	<span class="font-extralight tracking-tight text-xs xs:text-sm md:text-base px-8 sm:px-[10%]">
+		Our sponsors help us unite MCPS students to learn about cybersecurity and
+		digital forensics.
+	</span>
+	<SponsorButton client:idle />
+</div>

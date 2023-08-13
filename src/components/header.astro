@@ -32,9 +32,9 @@ const socialLinks: Array<FooterLink> = [
 
 <header
 	id="page-header"
-	class="absolute top-0 z-20 flex w-full items-center justify-between border-b-2 border-transparent px-8 sm:px-12 lg:px-24 py-6 ease-linear transition-all duration-250"
+	class="absolute top-0 z-20 flex w-full items-center gap-16 xs:gap-0 justify-center xs:justify-between border-b-2 border-transparent px-5 sm:px-12 lg:px-24 py-6 ease-linear transition-all duration-250"
 >
-	<div class="flex items-center gap-4 sm:gap-8">
+	<div class="flex items-center gap-3 xs:gap-4 sm:gap-8">
 		<button
 			id="open-nav-button"
 			type="button"
@@ -43,8 +43,8 @@ const socialLinks: Array<FooterLink> = [
 		>
 			<Icon pack="mdi" name="menu" class="h-8" />
 		</button>
-		<a class="relative inline hover:opacity-50" href="#">
-			<Logo sizeAdjust/>
+		<a class="hidden xs:inline relative hover:opacity-50" href="#">
+			<Logo sizeAdjust />
 		</a>
 		<nav class="hidden md:block">
 			<ul class="flex items-center gap-4 xs:gap-8">
@@ -60,6 +60,9 @@ const socialLinks: Array<FooterLink> = [
 			</ul>
 		</nav>
 	</div>
+	<a class="xs:hidden font-heading text-sm font-thin">
+		MCPSHSF
+	</a>
 	<div>
 		<div class="flex items-center xs:gap-6">
 			<ThemeSwitcher />
@@ -180,7 +183,7 @@ const socialLinks: Array<FooterLink> = [
 <style>
 	.fixed-header {
 		@apply fixed top-0 bottom-auto;
-		@apply border-default bg-default;
+		@apply border-default bg-default opacity-95;
 	}
 	.modal.is-open {
 		@apply block;

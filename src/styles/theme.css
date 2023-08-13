@@ -3,7 +3,7 @@
   --color-selection: rgba(180, 213, 254, 0.5);
   --color-secondary: rgb(235, 235, 235);
   --color-secondary-transparent: rgba(235, 235, 235, 0.8);
-  --color-offset: rgb(177, 189, 183);
+  --color-offset: rgb(205, 205, 205);
   --color-accent: rgb(255, 114, 71);
   --color-text: rgb(10, 10, 10);
   --color-icon: theme("colors.gray.400");
@@ -22,4 +22,5 @@
   --color-icon: rgb(252, 252, 252);
   --color-background: rgb(10, 10, 10);
   --color-border: theme("colors.gray.50" / 10%);
+  --color-glow: var(--color-text);
 }
