@@ -10,7 +10,7 @@
 		.flat();
 </script>
 
-<div class="relative">
+<div class="relative overflow-hidden">
 	<div id="seal" class="relative h-56 md:h-64 mt-4 md:mt-8 animate-spin-slow">
 		{#each array as char, index}
 			<div
