@@ -31,6 +31,7 @@ module.exports = {
       },
       borderColor: {
         default: "var(--color-border)",
+        text: "var(--color-text)",
       },
       screens: {
         xs: "480px",

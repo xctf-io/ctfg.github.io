@@ -101,6 +101,8 @@
 		{:else}
 			<li
 				class="relative flex flex-col items-center gap-2 border md:border-4 md:border-double border-primary p-2 xs:p-4 rounded-md xs:rounded-lg"
+				on:click={toggleAnswer}
+				on:keypress={toggleAnswer}
 			>
 				<p
 					class="xs:text-lg font-medium xs:font-semibold font-heading tracking-tighter md:tracking-normal"

@@ -8,6 +8,7 @@ import Splash from "~/components/splash.astro";
 import "~/styles/index.css";
 import About from "~/components/about.astro";
 import Sponsors from "~/components/sponsors.astro";
+import Timeline from "~/components/timeline.astro";
 
 const { generator, site } = Astro;
 const image = new URL("images/social.png", site);
@@ -70,6 +71,7 @@ const description =
 		<Splash />
 		<div class="flex flex-col items-center gap-12 md:gap-16 lg:gap-20 pt-32 pb-8 md:pb-16 w-full">
 			<About />
+			<Timeline />
 			<Sponsors />
 			<Faq client:idle />
 		</div>

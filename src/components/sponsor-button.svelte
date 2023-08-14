@@ -10,17 +10,19 @@
 		.flat();
 </script>
 
-<div class="relative overflow-hidden">
-	<div id="seal" class="relative h-56 md:h-64 mt-4 md:mt-8 animate-spin-slow">
-		{#each array as char, index}
-			<div
-				id="char"
-				class="font-heading absolute h-full left-1/2 top-0 uppercase"
-				style="--angle: {`${(1 / array.length) * index}turn`}"
-			>
-				{char}
-			</div>
-		{/each}
+<div class="relative">
+	<div class="overflow-hidden">
+		<div id="seal" class="relative h-56 md:h-64 mt-4 md:mt-8 animate-spin-slow">
+			{#each array as char, index}
+				<div
+					id="char"
+					class="font-heading absolute h-full left-1/2 top-0 uppercase"
+					style="--angle: {`${(1 / array.length) * index}turn`}"
+				>
+					{char}
+				</div>
+			{/each}
+		</div>
 	</div>
 	<a
 		class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[46%] md:-translate-y-[43%] hover:scale-110 hover:bg-red-600/20 border border-red-600/40 hover:border-red-600/80 hover:p-14 hover:md:p-20 hover:animate-pulse rounded-full p-12 md:p-16 ease-out transition-all duration-500"
