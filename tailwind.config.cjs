@@ -14,7 +14,6 @@ module.exports = {
         selection: "var(--color-selection)",
         primary: "var(--color-primary)",
         secondary: "var(--color-secondary)",
-        semitransparent: "var(--color-secondary-transparent)",
         accent: "var(--color-accent)",
       },
       textColor: {
@@ -32,6 +31,7 @@ module.exports = {
       borderColor: {
         default: "var(--color-border)",
         text: "var(--color-text)",
+        offset: "var(--color-offset)",
       },
       screens: {
         xs: "480px",

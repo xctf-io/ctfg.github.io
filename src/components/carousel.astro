@@ -1,0 +1,76 @@
+---
+const images = [
+    "images/hsf2.jpg",
+    "images/hsf3.jpg",
+    "images/hsf4.jpg",
+    "images/hsf5.jpg",
+    "images/hsf6.jpg",
+    "images/hsf7.jpg",
+];
+---
+
+<div class="relative overflow-x-hidden w-[80%] md:w-[85%] py-4 md:my-16 lg:my-20 rotate-0 md:rotate-1">
+    <div id="fade" class="absolute w-full h-full z-10 inset-0" />
+    <div id="background" class="absolute w-full -z-1 inset-0 bg-secondary border-offset border" />
+	<div id="carousel" class="flex flex-col md:flex-row h-[200%] md:h-auto w-auto md:w-[420%] gap-4 mx-4 md:mx-0 px-4 md:px-0 py-4 border-offset border-x-[10px] md:border-y-[10px] border-dashed z-1">
+		<div class="w-full">
+			<ul class="flex flex-col md:flex-row list-none gap-4">
+				{
+                    images.map((image) => (
+                        <li class="relative">
+                            <img class="block w-[60rem] md:w-[35rem] h-full rounded-md" src={image} />
+                            <div id="image-cover" class="absolute inset-0 rounded-md" />
+                        </li>
+                    ))
+                }
+			</ul>
+		</div>
+		<div class="w-full hidden md:inline-block">
+			<ul class="flex list-none gap-4">
+				{
+                    images.map((image) => (
+                        <li class="relative">
+                            <img class="block w-[60rem] md:w-[35rem] h-full rounded-md" src={image} />
+                            <div id="image-cover" class="absolute inset-0 rounded-md" />
+                        </li>
+                    ))
+                }
+			</ul>
+		</div>
+	</div>
+</div>
+
+<style>
+    #image-cover {
+        box-shadow: inset 0px 0px 20px 0px var(--color-text);  
+    }
+
+    @media (min-width: 768px) {
+	    #carousel {
+		    animation: bannermove 40s linear infinite;
+        }
+        #fade {
+            background-image: linear-gradient(to right, var(--color-background) 0%, transparent 20%, transparent 80%, var(--color-background) 100%);
+        }
+    }
+
+    #carousel {
+        transform: translateX(0);
+    }
+
+    @media (max-width: 768px) {
+        #fade {
+            background-image: linear-gradient(to bottom, var(--color-background) 0%, transparent 10%, transparent 90%, var(--color-background) 100%);
+        }
+    }
+    
+
+	@keyframes bannermove {
+		0% {
+			transform: translateX(-50%);
+		}
+        100% {
+			transform: translateX(0);
+		}
+	}
+</style>

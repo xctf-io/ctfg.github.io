@@ -2,7 +2,6 @@
   --color-primary: rgb(201, 162, 39);
   --color-selection: rgba(180, 213, 254, 0.5);
   --color-secondary: rgb(235, 235, 235);
-  --color-secondary-transparent: rgba(235, 235, 235, 0.8);
   --color-offset: rgb(215, 215, 215);
   --color-accent: rgb(255, 114, 71);
   --color-text: rgb(10, 10, 10);
@@ -15,7 +14,6 @@
   --color-primary: rgb(245, 203, 92);
   --color-selection: rgba(105, 155, 216, 0.5);
   --color-secondary: rgb(48, 48, 48);
-  --color-secondary-transparent: rgba(48, 48, 48, 0.8);
   --color-offset: rgb(68, 68, 68);
   --color-accent: rgb(255, 114, 71);
   --color-text: rgb(252, 252, 252);
