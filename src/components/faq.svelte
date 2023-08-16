@@ -41,8 +41,7 @@
 	];
 
 	function toggleAnswer(event) {
-		const entry = event.currentTarget;
-		const question = entry.firstElementChild;
+		const question = event.currentTarget;
 		const answer = question.nextElementSibling;
 		if (answer) {
 			answer.classList.toggle("hidden");
@@ -81,33 +80,37 @@
 	{#each features as { question, answer, icon }}
 		{#if question !== "What is a writeup?"}
 			<li
-				class="relative flex flex-col items-center gap-2 border md:border-4 md:border-double border-primary p-2 xs:p-4 rounded-md xs:rounded-lg"
-				on:click={toggleAnswer}
-				on:keypress={toggleAnswer}
+				class="flex flex-col items-center gap-2 border md:border-4 md:border-double border-primary p-2 xs:p-4 rounded-md xs:rounded-lg"
 			>
 				<p
-					class="xs:text-lg font-medium xs:font-semibold font-heading tracking-tighter md:tracking-normal"
+					class="relative w-full xs:text-lg font-medium xs:font-semibold font-heading tracking-tighter md:tracking-normal"
+					on:click={toggleAnswer}
+					on:keypress={toggleAnswer}
 				>
 					{question}
+					<Icon
+						class="md:hidden absolute top-1/2 -translate-y-1/2 -right-1 xs:-right-2 w-6 h-6"
+						{icon}
+					/>
 				</p>
 				<p class="hidden md:block text-offset text-sm">
 					{answer}
 				</p>
-				<Icon
-					class="md:hidden absolute top-3 right-1 xs:top-5 xs:right-2 w-6 h-6"
-					{icon}
-				/>
 			</li>
 		{:else}
 			<li
-				class="relative flex flex-col items-center gap-2 border md:border-4 md:border-double border-primary p-2 xs:p-4 rounded-md xs:rounded-lg"
-				on:click={toggleAnswer}
-				on:keypress={toggleAnswer}
+				class="flex flex-col items-center gap-2 border md:border-4 md:border-double border-primary p-2 xs:p-4 rounded-md xs:rounded-lg"
 			>
 				<p
-					class="xs:text-lg font-medium xs:font-semibold font-heading tracking-tighter md:tracking-normal"
+					class="w-full relative xs:text-lg font-medium xs:font-semibold font-heading tracking-tighter md:tracking-normal"
+					on:click={toggleAnswer}
+					on:keypress={toggleAnswer}
 				>
 					What is a writeup?
+					<Icon
+						class="md:hidden absolute -right-1 xs:-right-2 top-1/2 -translate-y-1/2 w-6 h-6"
+						{icon}
+					/>
 				</p>
 				<p class="hidden md:block font-light text-offset text-sm">
 					A writeup is a collection of all the evidence and flags you have
@@ -119,10 +122,6 @@
 					</a>
 					for MCPS HSF 2023.
 				</p>
-				<Icon
-					class="md:hidden absolute top-3 right-1 xs:top-5 xs:right-2 w-6 h-6"
-					{icon}
-				/>
 			</li>
 		{/if}
 	{/each}
