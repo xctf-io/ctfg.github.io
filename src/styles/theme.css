@@ -19,6 +19,6 @@
   --color-text: rgb(252, 252, 252);
   --color-icon: rgb(252, 252, 252);
   --color-background: rgb(10, 10, 10);
-  --color-border: rgb(38,38,38);
+  --color-border: rgb(38, 38, 38);
   --color-glow: var(--color-text);
 }

@@ -37,15 +37,18 @@ module.exports = {
         xs: "480px",
       },
       dropShadow: {
-        title: "0 2px 6px var(--color-primary)"
+        title: "0 2px 6px var(--color-primary)",
       },
       animation: {
-        'spin-slow': 'spin 50s linear infinite',
-      }
+        "spin-slow": "spin 50s linear infinite",
+      },
     },
   },
   corePlugins: {
     fontSize: false,
   },
-  plugins: [require("tailwindcss-fluid-type"), require('@tailwindcss/typography')],
+  plugins: [
+    require("tailwindcss-fluid-type"),
+    require("@tailwindcss/typography"),
+  ],
 };
