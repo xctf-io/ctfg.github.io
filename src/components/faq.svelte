@@ -54,7 +54,7 @@
 </span>
 
 <ul
-	class="grid max-w-7xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6 w-full px-3 xs:px-16 md:px-8 text-center"
+	class="grid max-w-7xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6 w-full px-6 xs:px-16 md:px-8 text-center"
 >
 	{#each features as { question, answer }}
 		{#if question !== "What is a writeup?"}
@@ -72,7 +72,7 @@
 						icon="mdi:chevron-down"
 					/>
 				</p>
-				<p class="hidden md:block text-offset text-sm font-extralight">
+				<p class="hidden md:block text-offset text-xs xs:text-sm font-extralight">
 					{answer}
 				</p>
 			</li>
@@ -91,7 +91,7 @@
 						icon="mdi:chevron-down"
 					/>
 				</p>
-				<p class="hidden md:block font-extralight text-sm">
+				<p class="hidden md:block font-extralight text-xs xs:text-sm">
 					A writeup is a collection of all the evidence and flags you have
 					collected, and how you found them. Check out b1c's{" "}
 					<a

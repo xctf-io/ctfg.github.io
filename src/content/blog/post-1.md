@@ -1,7 +1,7 @@
 ---
-title: "First post"
-description: "Lorem ipsum dolor sit amet"
-pubDate: "Jul 08 2022"
+title: "MCPS HSF 2023 Writeup"
+description: "The culprit and all of the evidence in MCPS HSF 2023"
+pubDate: "Aug 17 2023"
 heroImage: "/blog-placeholder-3.jpg"
 ---
 
