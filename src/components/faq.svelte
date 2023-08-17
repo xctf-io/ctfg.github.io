@@ -59,10 +59,10 @@
 	{#each features as { question, answer }}
 		{#if question !== "What is a writeup?"}
 			<li
-				class="flex flex-col items-center gap-2 border md:border-2 xl:border-4 bg-lowcontrast border-lowcontrast p-2 xs:p-4 rounded-md xs:rounded-lg"
+				class="flex flex-col items-center gap-2 border md:border-2 bg-lowcontrast border-lowcontrast p-2 xs:p-4 rounded-md xs:rounded-lg"
 			>
 				<p
-					class="relative w-full xs:text-lg xl:text-xl font-medium xs:font-semibold font-heading underline decoration-primary underline-offset-8 decoration-from-font"
+					class="relative w-full xs:text-lg xl:text-xl font-medium xs:font-semibold font-heading md:underline decoration-primary underline-offset-8 decoration-from-font"
 					on:click={toggleAnswer}
 					on:keypress={toggleAnswer}
 				>
@@ -78,10 +78,10 @@
 			</li>
 		{:else}
 			<li
-				class="flex flex-col items-center gap-2 border md:border-2 xl:border-4 bg-lowcontrast border-lowcontrast p-2 xs:p-4 rounded-md xs:rounded-lg"
+				class="flex flex-col items-center gap-2 border md:border-2 bg-lowcontrast border-lowcontrast p-2 xs:p-4 rounded-md xs:rounded-lg"
 			>
 				<p
-					class="w-full relative xs:text-lg xl:text-xl font-medium xs:font-semibold font-heading underline decoration-primary underline-offset-8 decoration-from-font"
+					class="w-full relative xs:text-lg xl:text-xl font-medium xs:font-semibold font-heading md:underline decoration-primary underline-offset-8 decoration-from-font"
 					on:click={toggleAnswer}
 					on:keypress={toggleAnswer}
 				>
