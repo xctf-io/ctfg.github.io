@@ -5,8 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["InterVariable", ...defaultTheme.fontFamily.sans],
-        heading: ["Unbounded Variable", "sans-serif"],
+        sans: ["Work Sans Variable", ...defaultTheme.fontFamily.sans],
+        heading: ["Poppins", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         bg: "var(--color-background)",
@@ -27,11 +27,14 @@ module.exports = {
         button: "var(--color-secondary)",
         primary: "var(--color-primary)",
         offset: "var(--color-offset)",
+        semitransparent: "var(--color-semitransparent)",
+        lowcontrast: "var(--color-low-contrast)"
       },
       borderColor: {
         default: "var(--color-border)",
         text: "var(--color-text)",
         offset: "var(--color-offset)",
+        lowcontrast: "var(--color-border-low-contrast)"
       },
       screens: {
         xs: "480px",

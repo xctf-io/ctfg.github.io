@@ -10,8 +10,14 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <SiteLayout title="MCPSHSF Blog">
-  <Header />
-  <div class="flex flex-col items-center">
+  <Header onBlog={true} />
+  <div class="flex flex-col items-center pt-32">
+    <div class="text-7xl text-center font-semibold min-w-full">
+      Welcome, hackers
+    </div>
+    <div class="text-3xl text-center font-extralight">
+      Get all the latest updates here!
+    </div>
     <div class="grid max-w-7xl grid-cols-1 md:grid-cols-3 gap-4 ">
         {
           posts.map((post) => (

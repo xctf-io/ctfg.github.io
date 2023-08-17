@@ -1,8 +1,4 @@
 ---
-import { Picture } from "@astrojs/image/components";
-import hsf1 from "~/assets/hsf-people.png";
-const widths = [450, 800, 1200];
-const sizes = "100vw";
 ---
 
 <div
@@ -10,12 +6,12 @@ const sizes = "100vw";
 	class="flex flex-col xl:flex-row gap-8 w-full py-24 px-8 xs:px-12 md:px-24 place-content-center"
 >
 	<div
-		class="xl:mr-0 px-8 flex gap-4 flex-col bg-secondary rounded-2xl border-offset border-2 w-full xl:w-[45%]"
+		class="xl:mr-0 px-8 flex gap-4 flex-col bg-secondary rounded-2xl border-offset border-4 w-full xl:w-[45%]"
 	>
 		<span
-			class="pt-6 text-base xs:text-3xl lg:text-2xl xl:text-3xl font-semibold font-heading"
+			class="pt-6 text-lg xs:text-3xl lg:text-2xl xl:text-3xl font-semibold font-heading"
 		>
-			<span class="border-b-8 border-b-primary">More</span> than a CTF
+			More than a CTF
 		</span>
 		<p class="text-xs xs:text-sm 2xl:text-lg font-light">
 			CTFs are awesome for honing your cyber skills, but let's face it: they're
@@ -44,6 +40,5 @@ const sizes = "100vw";
 			radial-gradient(theme("colors.text") 1%, transparent 2%);
 		background-position: 0 0, 50px 50px;
 		background-size: 100px 100px;
-		grid-auto-rows: 1fr;
 	}
 </style>
