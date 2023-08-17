@@ -62,7 +62,7 @@
 				class="flex flex-col items-center gap-2 border md:border-2 bg-lowcontrast border-lowcontrast p-2 xs:p-4 rounded-md xs:rounded-lg"
 			>
 				<p
-					class="relative w-full xs:text-lg xl:text-xl font-medium xs:font-semibold font-heading md:underline decoration-primary underline-offset-8 decoration-from-font"
+					class="relative w-full xs:text-lg font-medium xs:font-bold md:underline decoration-primary underline-offset-[10px] decoration-from-font"
 					on:click={toggleAnswer}
 					on:keypress={toggleAnswer}
 				>
@@ -72,7 +72,7 @@
 						icon="mdi:chevron-down"
 					/>
 				</p>
-				<p class="hidden md:block text-offset text-sm font-light">
+				<p class="hidden md:block text-offset text-sm font-extralight">
 					{answer}
 				</p>
 			</li>
@@ -81,7 +81,7 @@
 				class="flex flex-col items-center gap-2 border md:border-2 bg-lowcontrast border-lowcontrast p-2 xs:p-4 rounded-md xs:rounded-lg"
 			>
 				<p
-					class="w-full relative xs:text-lg xl:text-xl font-medium xs:font-semibold font-heading md:underline decoration-primary underline-offset-8 decoration-from-font"
+					class="w-full relative xs:text-lg font-medium xs:font-bold md:underline decoration-primary underline-offset-[10px] decoration-from-font"
 					on:click={toggleAnswer}
 					on:keypress={toggleAnswer}
 				>
@@ -91,7 +91,7 @@
 						icon="mdi:chevron-down"
 					/>
 				</p>
-				<p class="hidden md:block font-light text-sm">
+				<p class="hidden md:block font-extralight text-sm">
 					A writeup is a collection of all the evidence and flags you have
 					collected, and how you found them. Check out b1c's{" "}
 					<a

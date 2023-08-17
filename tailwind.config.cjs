@@ -5,8 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Work Sans Variable", ...defaultTheme.fontFamily.sans],
-        heading: ["Poppins", ...defaultTheme.fontFamily.sans],
+        sans: ["Lexend Variable", ...defaultTheme.fontFamily.sans],
+        heading: ["Lexend Exa Variable", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         bg: "var(--color-background)",
