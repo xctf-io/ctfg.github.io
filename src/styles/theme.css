@@ -1,6 +1,6 @@
 [data-theme="light"] {
-  --color-primary: rgb(201, 162, 39);
-  --color-selection: rgba(180, 213, 254, 0.5);
+  --color-primary: rgb(191, 5, 12);
+  --color-selection: rgba(184, 205, 232, 0.5);
   --color-secondary: rgb(215, 215, 215);
   --color-offset: rgb(205, 205, 205);
   --color-accent: rgb(255, 114, 71);
@@ -11,6 +11,7 @@
   --color-border: theme("colors.gray.900" / 10%);
   --color-low-contrast: rgb(226, 226, 226);
   --color-border-low-contrast: rgb(211, 211, 211);
+  --color-code: rgb(23, 23, 23);
 }
 
 [data-theme="dark"] {
@@ -27,4 +28,5 @@
   --color-glow: var(--color-text);
   --color-low-contrast: rgb(23, 23, 23);
   --color-border-low-contrast: rgb(48, 48, 48);
+  --color-code: rgb(48, 48, 48)
 }

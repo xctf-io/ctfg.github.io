@@ -77,7 +77,7 @@ const socialLinks: Array<FooterLink> = [
 			</ul>
 		</nav>
 	</div>
-	<a class="xs:hidden font-heading text-sm font-extralight" href="#"> MCPSHSF</a>
+	<a class="xs:hidden font-heading text-sm font-extralight" href={onBlog ? "/" : "#"}> MCPSHSF</a>
 	<div>
 		<div class="flex items-center xs:gap-6">
 			<ThemeSwitcher />
@@ -166,7 +166,6 @@ const socialLinks: Array<FooterLink> = [
 	closeNavButton.addEventListener("click", closeMenu);
 
 	var prevScrollPos = window.scrollY;
-
 	document.addEventListener("scroll", () => {
 		var currentScrollPos = window.scrollY;
 

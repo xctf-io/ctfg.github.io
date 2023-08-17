@@ -95,7 +95,7 @@
 					A writeup is a collection of all the evidence and flags you have
 					collected, and how you found them. Check out b1c's{" "}
 					<a
-						class="text-primary underline hover:decoration-wavy underline-offset-4 font-normal"
+						class="link font-normal"
 						href="pdfs/b1c_HSFReport.pdf"
 						>excellent writeup
 					</a>

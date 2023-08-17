@@ -14,6 +14,7 @@ module.exports = {
         selection: "var(--color-selection)",
         primary: "var(--color-primary)",
         secondary: "var(--color-secondary)",
+        code: "var(--color-code)",
         accent: "var(--color-accent)",
       },
       textColor: {
@@ -28,7 +29,7 @@ module.exports = {
         primary: "var(--color-primary)",
         offset: "var(--color-offset)",
         semitransparent: "var(--color-semitransparent)",
-        lowcontrast: "var(--color-low-contrast)"
+        lowcontrast: "var(--color-low-contrast)",
       },
       borderColor: {
         default: "var(--color-border)",
@@ -41,9 +42,26 @@ module.exports = {
       },
       dropShadow: {
         title: "0 2px 6px var(--color-primary)",
+        lowcontrast: "0 2px 6px var(--color-border-low-contrast)"
       },
       animation: {
         "spin-slow": "spin 50s linear infinite",
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            a: {
+              color: "var(--color-primary)",
+              "text-underline-offset" : "4px",
+              '&:hover': {
+                "text-decoration-style": "wavy"
+              },
+            },
+            pre: {
+              color: "var(--color-text)"
+            }
+          },
+        },
       },
     },
   },
