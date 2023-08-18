@@ -17,10 +17,10 @@ const posts = (await getCollection("blog")).sort(
 				posts.map((post) => (
 					<a
 						href={`/blog/${post.slug}/`}
-						class="max-w-lg border border-lowcontrast overflow-hidden drop-shadow-lowcontrast bg-lowcontrast rounded-md"
+						class="max-w-lg border border-lowcontrast overflow-hidden bg-lowcontrast rounded-md"
 					>
-						<img class="object-cover w-full md:h-60 border-b border-lowcontrast" src={post.data.heroImage} alt="" />
-						<div class="px-4 pt-2 pb-4">
+						<img class="object-cover w-full md:h-60" src={post.data.heroImage} alt=" hero image" />
+						<div class="px-4 md:px-6 pt-2 md:pt-3 pb-4 md:pb-6">
 							<ul>
 								{post.data.tags.map((tag) => 
 								<li class="text-primary font-light text-xs xs:text-sm inline-block mr-2">

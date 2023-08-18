@@ -34,9 +34,9 @@ const sortedPosts = taggedPosts.sort(
 				sortedPosts.map((post) => (
 					<a
 						href={`/blog/${post.slug}/`}
-						class="max-w-lg border border-lowcontrast overflow-hidden drop-shadow-lowcontrast bg-lowcontrast rounded-md"
+						class="max-w-lg border border-lowcontrast overflow-hidden bg-lowcontrast rounded-md"
 					>
-						<img class="object-cover w-full md:h-60 border-b border-lowcontrast" src={post.data.heroImage} alt="" />
+						<img class="object-cover w-full md:h-60" src={post.data.heroImage} alt="" />
 						<div class="px-4 pt-2 pb-4">
 							<ul>
 								{post.data.tags.map((t) => 
