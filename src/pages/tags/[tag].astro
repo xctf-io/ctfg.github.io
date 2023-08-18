@@ -4,6 +4,7 @@ import FormattedDate from "../../components/formatted-date.astro"
 import getUniqueTags from "../../utils/getUniqueTags";
 import getPostsByTag from "../../utils/getPostsByTag"
 import BlogLayout from "../../layouts/blog-layout.astro";
+import Icon from "astro-icon";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -33,20 +34,23 @@ const sortedPosts = taggedPosts.sort(
 				sortedPosts.map((post) => (
 					<a
 						href={`/blog/${post.slug}/`}
-						class="max-w-lg border border-lowcontrast overflow-hidden drop-shadow-lowcontrast bg-lowcontrast p-4 rounded xs:rounded-md"
+						class="max-w-lg border border-lowcontrast overflow-hidden drop-shadow-lowcontrast bg-lowcontrast rounded-md"
 					>
-						<p class="font-light text-xs text-offset">
-							<FormattedDate date={post.data.pubDate} />
-						</p>
-						<img class="object-cover my-4 rounded xs:rounded-md w-full md:h-60 border border-lowcontrast" src={post.data.heroImage} alt="" />
-						<p class="font-bold xs:font-heading xs:text-lg">{post.data.title}</p>
-						<p class="font-extralight text-xs xs:text-sm">{post.data.description}</p>
-						<ul>
-							{post.data.tags.map((t) => 
-							<li class="text-primary font-light text-xs xs:text-sm inline-block mr-2">
-								#{t}
-							</li>)}
-    					</ul>
+						<img class="object-cover w-full md:h-60 border-b border-lowcontrast" src={post.data.heroImage} alt="" />
+						<div class="px-4 pt-2 pb-4">
+							<ul>
+								{post.data.tags.map((t) => 
+								<li class="font-light text-primary text-xs xs:text-sm inline-block mr-2">
+									#{t}
+								</li>)}
+							</ul>
+							<p class="font-bold xs:font-heading xs:text-lg">{post.data.title}</p>
+							<p class="font-extralight text-xs xs:text-sm">{post.data.description}</p>
+							<p class="font-light opacity-50 text-xs text-offset pt-2">
+								<Icon class="h-5 inline-block mr-2 opacity-50" name="mdi:calendar-clock" />
+								<FormattedDate date={post.data.pubDate} />
+							</p>
+						</div>
 					</a>
 				))
 			}

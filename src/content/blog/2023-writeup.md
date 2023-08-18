@@ -3,7 +3,7 @@ title: "MCPS HSF 2023 Writeup"
 description: "The culprit and all of the evidence in MCPS HSF 2023"
 pubDate: "Aug 17 2023"
 heroImage: "/images/blog/2023-writeup/hero.jpg"
-tags: ["writeups"]
+tags: ["writeups", "2023"]
 ---
 
 ### Quick Note
