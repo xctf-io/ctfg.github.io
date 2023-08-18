@@ -5,11 +5,11 @@ import Icon from "astro-icon";
 const widths = [450, 800, 1200];
 const sizes = "30vw";
 // add props to the component
-const {sizeAdjust} = Astro.props;
+const { sizeAdjust } = Astro.props;
 ---
 
 <div class="relative inline">
-	<Icon name="logo" class={sizeAdjust ? "h-8 xs:h-12" : "h-12"}/>
+	<Icon name="logo" class={sizeAdjust ? "h-8 xs:h-12" : "h-12"} />
 	<Picture
 		class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
 		src={bgImage}

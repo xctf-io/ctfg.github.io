@@ -35,12 +35,15 @@ const competitions = [
 
 <span
 	id="history"
-	class="w-full xl:w-[50%] border-b border-primary font-heading font-bold"
+	class="w-full border-b border-primary font-heading font-bold xl:w-[50%]"
 >
-<span class="absolute text-5xl bg-default left-1/2 -translate-x-1/2 -translate-y-1/2 px-4">History</span>
+	<span
+		class="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 bg-default px-4 text-5xl"
+		>History</span
+	>
 </span>
 <ol
-	class="border-l-2 border-primary dark:border-primary-500 mx-6 xs:mx-12 lg:mx-56"
+	class="dark:border-primary-500 mx-6 border-l-2 border-primary xs:mx-12 lg:mx-56"
 >
 	{
 		competitions.map(({ year, description, source_url, writeup }) => {
@@ -49,23 +52,26 @@ const competitions = [
 					<li>
 						<div class="flex-start flex items-center">
 							<div class="-ml-[9px] -mt-2 mr-3 flex h-4 w-4 items-center justify-center rounded-full bg-primary" />
-							<h4 class="-mt-2 text-xl font-semibold font-heading">
+							<h4 class="-mt-2 font-heading font-semibold text-xl">
 								MCPS HSF {year}
 							</h4>
 						</div>
 						<div class="mb-6 ml-6 pb-6">
-							<span class="text-xs md:text-sm text-primary font-light">
+							<span class="font-light text-primary text-xs md:text-sm">
 								March 14, {year}
 							</span>
-							<p class="text-sm md:text-base mb-4 mt-1 md:mt-2 font-extralight">
+							<p class="mb-4 mt-1 font-extralight text-sm md:mt-2 md:text-base">
 								{description}
 							</p>
 							<a
-								class="inline-flex items-center rounded-lg bg-secondary p-2 xs:py-3 xs:px-4 hover:bg-offset"
+								class="inline-flex items-center rounded-lg bg-secondary p-2 hover:bg-offset xs:py-3 xs:px-4"
 								href={source_url}
 							>
-								<Icon name="mdi:github" class="xs:mr-3 h-6 w-6" />
-								<span class="hidden xs:flex text-xs font-medium font-heading relative">
+								<Icon
+									name="mdi:github"
+									class="h-6 w-6 xs:mr-3"
+								/>
+								<span class="relative hidden font-heading font-medium text-xs xs:flex">
 									Source Code
 								</span>
 							</a>
@@ -77,33 +83,39 @@ const competitions = [
 					<li>
 						<div class="flex-start flex items-center">
 							<div class="-ml-[9px] -mt-2 mr-3 flex h-4 w-4 items-center justify-center rounded-full bg-primary" />
-							<h4 class="-mt-2 text-xl font-semibold font-heading">
+							<h4 class="-mt-2 font-heading font-semibold text-xl">
 								MCPS HSF {year}
 							</h4>
 						</div>
 						<div class="mb-6 ml-6 pb-6">
-							<span class="text-xs md:text-sm text-primary font-light">
+							<span class="font-light text-primary text-xs md:text-sm">
 								March 14, {year}
 							</span>
-							<p class="text-sm md:text-base mb-4 mt-1 md:mt-2 font-extralight">
+							<p class="mb-4 mt-1 font-extralight text-sm md:mt-2 md:text-base">
 								{description}
 							</p>
 							<div class="flex flex-row gap-3">
 								<a
-									class="inline-flex items-center rounded-lg bg-secondary p-2 xs:py-3 xs:px-4 hover:bg-offset"
+									class="inline-flex items-center rounded-lg bg-secondary p-2 hover:bg-offset xs:py-3 xs:px-4"
 									href={source_url}
 								>
-									<Icon name="mdi:github" class="xs:mr-3 h-6 w-6" />
-									<span class="hidden xs:flex text-xs font-medium font-heading relative">
+									<Icon
+										name="mdi:github"
+										class="h-6 w-6 xs:mr-3"
+									/>
+									<span class="relative hidden font-heading font-medium text-xs xs:flex">
 										Source Code
 									</span>
 								</a>
 								<a
-									class="inline-flex items-center rounded-lg bg-secondary p-2 xs:py-3 xs:px-4 hover:bg-offset"
+									class="inline-flex items-center rounded-lg bg-secondary p-2 hover:bg-offset xs:py-3 xs:px-4"
 									href={writeup}
 								>
-									<Icon name="mdi:file-document" class="xs:mr-3 h-6 w-6" />
-									<span class="hidden xs:flex text-xs font-medium font-heading relative">
+									<Icon
+										name="mdi:file-document"
+										class="h-6 w-6 xs:mr-3"
+									/>
+									<span class="relative hidden font-heading font-medium text-xs xs:flex">
 										Writeup
 									</span>
 								</a>

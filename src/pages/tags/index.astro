@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import getUniqueTags from "../../utils/getUniqueTags";
 import BlogLayout from "../../layouts/blog-layout.astro";
-import Tag from "../../components/tag.astro"
+import Tag from "../../components/tag.astro";
 
 const posts = await getCollection("blog");
 
@@ -10,9 +10,9 @@ let tags = getUniqueTags(posts);
 ---
 
 <BlogLayout title="Tags">
-    <div class="flex justify-center md:px-32 xs:px-12 px-10">
-	    <ul>
-		    {tags.map((tag) => <Tag name={tag} />)}
-        </ul>
-    </div>
+	<div class="flex justify-center px-10 xs:px-12 md:px-32">
+		<ul>
+			{tags.map((tag) => <Tag name={tag} />)}
+		</ul>
+	</div>
 </BlogLayout>

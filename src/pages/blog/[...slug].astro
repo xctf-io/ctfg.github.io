@@ -19,33 +19,31 @@ const { Content } = await post.render();
 ---
 
 <SiteLayout title={post.data.title}>
-	<div class="flex flex-col w-full items-center break-words overflow-hidden">
+	<div class="flex w-full flex-col items-center overflow-hidden break-words">
 		<Header onBlog={true} />
 		<div
-			class="flex flex-col gap-1 xs:gap-2 md:gap-4 text-center pt-[104px] xs:pt-[112px] md:pt-32 px-4"
+			class="flex flex-col gap-1 px-4 pt-[104px] text-center xs:gap-2 xs:pt-[112px] md:gap-4 md:pt-32"
 		>
-			<span class="text-xs font-mono">
+			<span class="font-mono text-xs">
 				<FormattedDate date={post.data.pubDate} />
 			</span>
 			<div>
-				<div class="text-4xl font-black">
+				<div class="font-black text-4xl">
 					{post.data.title}
 				</div>
-				<div class="xs:block hidden text-base font-thin">
+				<div class="hidden font-thin text-base xs:block">
 					{post.data.description}
 				</div>
 			</div>
-			<div class="mt-2 w-full bg-secondary h-1 rounded-full"></div>
+			<div class="mt-2 h-1 w-full rounded-full bg-secondary"></div>
 			<img
-				class="rounded-md max-w-3xl w-full border border-lowcontrast my-4 drop-shadow-lowcontrast"
+				class="my-4 w-full max-w-3xl rounded-md border border-lowcontrast drop-shadow-lowcontrast"
 				src={post.data.heroImage}
 				alt=""
 			/>
 		</div>
 		<article
-			class="prose prose-sm lg:prose-lg xs:prose-base prose-headings:!mb-3 prose-strong:!text-skin-base prose-img:rounded-md 
-			prose-pre:bg-code prose-blockquote:text-default prose-blockquote:italic prose-code:text-primary 
-			prose-headings:text-default text-default font-light w-full px-8 lg:px-0 pt-4 lg:pt-8 prose-blockquote:border-text"
+			class="prose-strong:!text-skin-base prose prose-sm w-full px-8 pt-4 font-light text-default prose-headings:!mb-3 prose-headings:text-default prose-blockquote:border-text prose-blockquote:italic prose-blockquote:text-default prose-code:text-primary prose-pre:bg-code prose-img:rounded-md xs:prose-base lg:prose-lg lg:px-0 lg:pt-8"
 		>
 			<Content />
 		</article>

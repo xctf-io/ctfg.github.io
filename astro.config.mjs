@@ -9,23 +9,21 @@ import { remarkReadingTime } from "./src/utils/remark-reading-time.mjs";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://mcpshsf.com/",
-  integrations: [
-    tailwind(),
-    image({
-      serviceEntryPoint: "@astrojs/image/sharp",
-    }),
-    svelte(),
-    sitemap(),
-  ],
-  vite: {
-    ssr: {
-      external: ["svgo"],
-    },
-  },
-  markdown: {
-    remarkPlugins: [
-      remarkReadingTime,
-    ]
-  }
+	site: "https://mcpshsf.com/",
+	integrations: [
+		tailwind(),
+		image({
+			serviceEntryPoint: "@astrojs/image/sharp",
+		}),
+		svelte(),
+		sitemap(),
+	],
+	vite: {
+		ssr: {
+			external: ["svgo"],
+		},
+	},
+	markdown: {
+		remarkPlugins: [remarkReadingTime],
+	},
 });

@@ -21,13 +21,13 @@ const links: Array<FooterLink> = [
 ];
 ---
 
-<footer class="text-white flex flex-col items-center text-default w-full">
-	<ul class="flex flex-row items-center justify-center mb-2">
+<footer class="flex w-full flex-col items-center text-white text-default">
+	<ul class="mb-2 flex flex-row items-center justify-center">
 		{
 			links.map((link) => (
 				<li>
 					<a
-						class="flex h-16 w-16 sm:h-20 sm:w-20 hover:text-primary p-4"
+						class="flex h-16 w-16 p-4 hover:text-primary sm:h-20 sm:w-20"
 						href={link.url}
 						aria-label={link.description}
 					>
@@ -39,7 +39,7 @@ const links: Array<FooterLink> = [
 		}
 	</ul>
 	<p
-		class="text-center text-offset text-xs xs:text-sm font-light mb-8 xs:mb-12"
+		class="mb-8 text-center font-light text-offset text-xs xs:mb-12 xs:text-sm"
 	>
 		Fiscally sponsored by The Hack Foundation <br />
 		Nonprofit EIN: 81-2908499

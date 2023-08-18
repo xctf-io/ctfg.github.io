@@ -1,56 +1,76 @@
 ---
 import Icon from "astro-icon";
 import { Picture } from "@astrojs/image/components";
-import cautionTape  from "~/assets/caution.png";
+import cautionTape from "~/assets/caution.png";
 const widths = [450, 800, 1200];
 const sizes = "40vw";
-const sizes2 = "100vw"
+const sizes2 = "100vw";
 ---
-<div id="splash" class="relative h-full overflow-hidden font-black font-heading">
+
+<div
+	id="splash"
+	class="relative h-full overflow-hidden font-heading font-black"
+>
 	<div
-		class="flex flex-col items-center justify-center h-full gap-2 sm:gap-3 md:gap-4 text-center text-2xl xs:text-4xl sm:text-5xl lg:text-7xl tracking-tighter"
+		class="flex h-full flex-col items-center justify-center gap-2 text-center tracking-tighter text-2xl xs:text-4xl sm:gap-3 sm:text-5xl md:gap-4 lg:text-7xl"
 	>
 		<span class="text-primary"> Unravel a</span>
 		<span
 			data-text="Murder Mystery"
-			class="glitch layers drop-shadow-title bg-primary py-3 xs:py-4 px-4 xs:px-8 text-invert border border-primary rounded-xl xs:rounded-2xl md:rounded-3xl tracking-tighter"
+			class="glitch layers rounded-xl border border-primary bg-primary py-3 px-4 tracking-tighter text-invert drop-shadow-title xs:rounded-2xl xs:py-4 xs:px-8 md:rounded-3xl"
 		>
 			<span class="hacker-text"> Murder Mystery</span>
 		</span>
 	</div>
 </div>
 <div id="splash-bg" class="opacity-20">
-	<div class="absolute top-[30%] md:top-[25%] left-[5%] -rotate-12">
+	<div class="absolute top-[30%] left-[5%] -rotate-12 md:top-[25%]">
 		<Icon class="h-10 md:h-20" name="twemoji:detective" />
 	</div>
-	<div class="absolute top-[18%] md:top-[14%] right-[14%] md:right-[10%] -rotate-[100deg]">
-		<Icon class="h-8 xs:h-10 md:h-24" name="twemoji:magnifying-glass-tilted-right" />
+	<div
+		class="absolute top-[18%] right-[14%] -rotate-[100deg] md:top-[14%] md:right-[10%]"
+	>
+		<Icon
+			class="h-8 xs:h-10 md:h-24"
+			name="twemoji:magnifying-glass-tilted-right"
+		/>
 	</div>
-	<div class="absolute top-1/4 md:left-1/2 rotate-[15deg] md:rotate-[20deg]">
+	<div class="absolute top-1/4 rotate-[15deg] md:left-1/2 md:rotate-[20deg]">
 		<Picture src={cautionTape} widths={widths} sizes={sizes2} alt="tape" />
 	</div>
-	<div class="absolute top-3/4 md:left-[15%] -rotate-12 md:-rotate-[9deg]">
+	<div class="absolute top-3/4 -rotate-12 md:left-[15%] md:-rotate-[9deg]">
 		<Picture src={cautionTape} widths={widths} sizes={sizes2} alt="tape" />
 	</div>
-	<div class="absolute top-[67%] left-[44%] md:left-[35%] rotate-[6deg] md:-rotate-[3deg]">
+	<div
+		class="absolute top-[67%] left-[44%] rotate-[6deg] md:left-[35%] md:-rotate-[3deg]"
+	>
 		<Icon class="h-6 xs:h-10 md:h-16" name="twemoji:woman-detective" />
 	</div>
-	<div class="absolute top-[69%] left-[12%] md:left-[7%] -rotate-[80deg]">
-		<Icon class="h-8 xs:h-10 md:h-20" name="twemoji:magnifying-glass-tilted-right" />
+	<div class="absolute top-[69%] left-[12%] -rotate-[80deg] md:left-[7%]">
+		<Icon
+			class="h-8 xs:h-10 md:h-20"
+			name="twemoji:magnifying-glass-tilted-right"
+		/>
 	</div>
-	<div class="absolute top-[15%] md:top-[12%] right-[40%] md:right-[78%] rotate-6">
+	<div
+		class="absolute top-[15%] right-[40%] rotate-6 md:top-[12%] md:right-[78%]"
+	>
 		<Icon class="h-10 md:h-24" name="twemoji:laptop" />
 	</div>
-	<div class="absolute top-[90%] md:top-[85%] right-[10%]">
+	<div class="absolute top-[90%] right-[10%] md:top-[85%]">
 		<Icon class="h-6 md:h-20" name="twemoji:laptop" />
 	</div>
-	<div class="absolute top-[62%] md:top-[18%] right-[20%] md:right-[53%] rotate-[9deg] md:rotate-0">
+	<div
+		class="absolute top-[62%] right-[20%] rotate-[9deg] md:top-[18%] md:right-[53%] md:rotate-0"
+	>
 		<Icon class="h-8 xs:h-10 md:h-20" name="twemoji:locked" />
 	</div>
-	<div class="absolute top-[88%] left-[20%] md:left-[5%] rotate-12">
+	<div class="absolute top-[88%] left-[20%] rotate-12 md:left-[5%]">
 		<Icon class="h-10 md:h-16" name="twemoji:mobile-phone" />
 	</div>
-	<div class="absolute top-[87%] left-1/2 md:left-[70%] rotate-[30deg] md:-rotate-[60deg]">
+	<div
+		class="absolute top-[87%] left-1/2 rotate-[30deg] md:left-[70%] md:-rotate-[60deg]"
+	>
 		<Icon class="h-12 md:h-24" name="twemoji:axe" />
 	</div>
 	<div class="hidden md:block">
@@ -58,28 +78,39 @@ const sizes2 = "100vw"
 			<Icon class="h-12 md:h-24" name="twemoji:red-question-mark" />
 		</div>
 		<div class="absolute top-[30%] left-0 -rotate-12 md:-rotate-[30deg]">
-			<Picture src={cautionTape} widths={widths} sizes={sizes} alt="tape"/>
+			<Picture
+				src={cautionTape}
+				widths={widths}
+				sizes={sizes}
+				alt="tape"
+			/>
 		</div>
 	</div>
 </div>
 
 <script>
-	const mysteries = ['Murder Mystery', 'Whodunit', 'Vanishing Act', 'Kidnapping Plot', 'Cryptic Riddle'];
+	const mysteries = [
+		"Murder Mystery",
+		"Whodunit",
+		"Vanishing Act",
+		"Kidnapping Plot",
+		"Cryptic Riddle",
+	];
 	let index = 0;
-	const glitch = document.querySelector('.glitch') as HTMLElement;
-	const hackerText = document.querySelector('.hacker-text') as HTMLElement;
-	
+	const glitch = document.querySelector(".glitch") as HTMLElement;
+	const hackerText = document.querySelector(".hacker-text") as HTMLElement;
+
 	setInterval(() => {
 		hackerText.textContent = mysteries[index];
-		glitch.setAttribute('data-text', mysteries[index]);
-		index = (index + 1) % (mysteries.length);
+		glitch.setAttribute("data-text", mysteries[index]);
+		index = (index + 1) % mysteries.length;
 	}, 5000);
 </script>
 
 <style>
-@media(max-height: 500px) {
-	#splash-bg {
-		display: none;
+	@media (max-height: 500px) {
+		#splash-bg {
+			display: none;
+		}
 	}
-}
 </style>
