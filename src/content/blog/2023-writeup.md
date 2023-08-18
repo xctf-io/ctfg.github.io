@@ -31,7 +31,7 @@ MCPS HSF (Montgomery County Public Schools High School Forensics) is a CTF compe
 <br />
 <br />
 
-The goal this year was to figure out who killed Chance. Also, make sure to check out b1c's [excellent writeup](b1c_writeup.pdf)!
+The goal this year was to figure out who killed Chance. Also, make sure to check out b1c's [excellent writeup](/pdfs/b1c_HSFReport.pdf)!
 
 ## Challenge Graph
 
