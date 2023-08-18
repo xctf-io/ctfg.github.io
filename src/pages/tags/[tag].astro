@@ -1,19 +1,36 @@
 ---
 import { getCollection } from "astro:content";
-import FormattedDate from "~/components/formatted-date.astro";
-import BlogLayout from "~/layouts/blog-layout.astro";
-import Tag from "~/components/tag.astro"
+import FormattedDate from "../../components/formatted-date.astro"
+import getUniqueTags from "../../utils/getUniqueTags";
+import getPostsByTag from "../../utils/getPostsByTag"
+import BlogLayout from "../../layouts/blog-layout.astro";
 
-const posts = (await getCollection("blog")).sort(
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+
+  const tags = getUniqueTags(posts);
+
+  return tags.map(tag => {
+    return {
+      params: { tag },
+      props: { tag },
+    };
+  });
+}
+
+const { tag } = Astro.props;
+
+const posts = await getCollection("blog");
+const taggedPosts = getPostsByTag(posts, tag);
+const sortedPosts = taggedPosts.sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 ---
-
-<BlogLayout title="Welcome, hackers" description="Get all the latest updates here!">
-	<div class="flex flex-col items-center w-full">
+<BlogLayout title={`Tag:${tag}`}>
+    <div class="flex flex-col items-center w-full">
 		<div class="grid max-w-7xl grid-cols-1 md:grid-cols-2 gap-16 mx-5 xs:mx-8 md:mx-0">
 			{
-				posts.map((post) => (
+				sortedPosts.map((post) => (
 					<a
 						href={`/blog/${post.slug}/`}
 						class="max-w-lg border border-lowcontrast overflow-hidden drop-shadow-lowcontrast bg-lowcontrast p-4 rounded xs:rounded-md"
@@ -25,9 +42,9 @@ const posts = (await getCollection("blog")).sort(
 						<p class="font-bold xs:font-heading xs:text-lg">{post.data.title}</p>
 						<p class="font-extralight text-xs xs:text-sm">{post.data.description}</p>
 						<ul>
-							{post.data.tags.map((tag) => 
+							{post.data.tags.map((t) => 
 							<li class="text-primary font-light text-xs xs:text-sm inline-block mr-2">
-								#{tag}
+								#{t}
 							</li>)}
     					</ul>
 					</a>

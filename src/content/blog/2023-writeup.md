@@ -3,9 +3,10 @@ title: "MCPS HSF 2023 Writeup"
 description: "The culprit and all of the evidence in MCPS HSF 2023"
 pubDate: "Aug 17 2023"
 heroImage: "/images/blog/2023-writeup/hero.jpg"
+tags: ["writeups"]
 ---
 
-## Quick Note
+### Quick Note
 
 MCPS HSF (Montgomery County Public Schools High School Forensics) is a CTF competition for high school students in Montgomery County, Maryland. This year, it was held on March 14th, 2023. All challenges were generated using [chalgen](https://github.com/xctf-io/chalgen), a tool we wrote to generate CTF challenges. If you want to see the source code for this competition, visit the [competitions/mcpshsf-2023](https://github.com/xctf-io/chalgen/tree/master/competitions/mcpshsf-2023) folder. The competition also used [xCTF](https://github.com/xctf-io/xctf), a custom web application we wrote for HSFs, to allow competitors to connect and enter evidence. If you like these types of competitions, please give us a star on GitHub!
 

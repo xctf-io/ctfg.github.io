@@ -17,6 +17,9 @@ dependencies:
   '@fontsource-variable/lexend-exa':
     specifier: ^5.0.8
     version: 5.0.8
+  github-slugger:
+    specifier: ^2.0.0
+    version: 2.0.0
   micromodal:
     specifier: ^0.4.10
     version: 0.4.10

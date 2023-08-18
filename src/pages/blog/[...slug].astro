@@ -18,10 +18,12 @@ const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<SiteLayout>
+<SiteLayout title={post.data.title}>
 	<div class="flex flex-col w-full items-center break-words overflow-hidden">
 		<Header onBlog={true} />
-		<div class="flex flex-col gap-1 xs:gap-2 md:gap-4 text-center pt-[104px] xs:pt-[112px] md:pt-32 px-4">
+		<div
+			class="flex flex-col gap-1 xs:gap-2 md:gap-4 text-center pt-[104px] xs:pt-[112px] md:pt-32 px-4"
+		>
 			<span class="text-xs font-mono">
 				<FormattedDate date={post.data.pubDate} />
 			</span>
@@ -41,12 +43,14 @@ const { Content } = await post.render();
 			/>
 		</div>
 		<article
-			class="prose prose-sm prose-img:rounded-md xs:prose-base lg:prose-lg prose-pre:bg-code prose-blockquote:text-default prose-blockquote:italic prose-code:text-primary prose-headings:text-default text-default font-light w-full px-8 lg:px-0 pt-4 lg:pt-8"
+			class="prose prose-sm lg:prose-lg xs:prose-base prose-headings:!mb-3 prose-strong:!text-skin-base prose-img:rounded-md 
+			prose-pre:bg-code prose-blockquote:text-default prose-blockquote:italic prose-code:text-primary 
+			prose-headings:text-default text-default font-light w-full px-8 lg:px-0 pt-4 lg:pt-8 prose-blockquote:border-text"
 		>
 			<Content />
 		</article>
 	</div>
 	<div class="mt-8 xs:mt-16 md:mt-24">
-		<Footer /> 
+		<Footer />
 	</div>
 </SiteLayout>

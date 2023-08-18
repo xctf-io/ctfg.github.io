@@ -3,7 +3,7 @@ a {
   @apply hover:scale-105 hover:ease-in-out transition-all duration-200;
 }
 .link {
-  @apply text-primary underline hover:decoration-wavy underline-offset-4
+  @apply text-primary underline hover:decoration-wavy underline-offset-[6px]
 }
 
 .layers {
