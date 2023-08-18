@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import SiteLayout from "../../layouts/site-layout.astro";
 import FormattedDate from "~/components/formatted-date.astro";
 import Header from "~/components/header.astro";
+import Footer from "~/components/footer.astro";
 
 const posts = (await getCollection("blog")).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
@@ -11,7 +12,7 @@ const posts = (await getCollection("blog")).sort(
 
 <SiteLayout title="MCPSHSF Blog">
 	<Header onBlog={true} />
-	<div id="blog-header" class="flex flex-col items-center py-12 mb-6 px-4">
+	<div id="blog-header" class="flex flex-col items-center pb-12 mb-6 px-4 pt-[144px]">
 		<div class="text-3xl xs:text-6xl text-center font-medium min-w-full">
 			Welcome, hackers
 		</div>
@@ -45,4 +46,7 @@ const posts = (await getCollection("blog")).sort(
 				linear-gradient(to bottom, var(--color-border-low-contrast) 1px, transparent 1px);
 		}
 	</style>
+	<div class="mt-8 xs:mt-16 md:mt-32">
+		<Footer /> 
+	</div>
 </SiteLayout>
