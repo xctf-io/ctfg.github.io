@@ -5,6 +5,7 @@ import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 import sitemap from "@astrojs/sitemap";
+import { remarkReadingTime } from "./src/utils/remark-reading-time.mjs";
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,4 +23,9 @@ export default defineConfig({
       external: ["svgo"],
     },
   },
+  markdown: {
+    remarkPlugins: [
+      remarkReadingTime,
+    ]
+  }
 });

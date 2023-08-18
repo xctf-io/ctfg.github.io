@@ -10,7 +10,7 @@ let tags = getUniqueTags(posts);
 ---
 
 <BlogLayout title="Tags">
-    <div class="flex justify-center md:px-32 xs:px-12 px-10 min-h-[40vh]">
+    <div class="flex justify-center md:px-32 xs:px-12 px-10">
 	    <ul>
 		    {tags.map((tag) => <Tag name={tag} />)}
         </ul>

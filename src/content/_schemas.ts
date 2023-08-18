@@ -9,12 +9,9 @@ export const blogSchema = z
 			.string()
 			.or(z.date())
 			.transform((val) => new Date(val)),
-		updatedDate: z
-			.string()
-			.optional()
-			.transform((str) => (str ? new Date(str) : undefined)),
-		heroImage: z.string().optional(),
+		heroImage: z.string(),
 		tags: z.array(z.string()).default(["others"]),
+		readingTime: z.string().optional(),
 	})
 	.strict();
 
