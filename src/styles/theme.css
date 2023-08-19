@@ -6,11 +6,11 @@
 	--color-accent: rgb(255, 114, 71);
 	--color-text: rgb(17, 17, 17);
 	--color-icon: theme("colors.gray.400");
-	--color-background: rgb(232, 232, 232);
-	--color-semitransparent: rgba(232, 232, 232, 0.95);
+	--color-background: rgb(242, 242, 242);
+	--color-semitransparent: rgba(242, 242, 242, 0.9);
 	--color-border: theme("colors.gray.900" / 10%);
-	--color-low-contrast: rgb(226, 226, 226);
-	--color-border-low-contrast: rgb(211, 211, 211);
+	--color-low-contrast: rgb(230, 230, 230);
+	--color-border-low-contrast: rgb(215, 215, 215);
 	--color-code: rgb(23, 23, 23);
 }
 
@@ -23,7 +23,7 @@
 	--color-text: rgb(242, 242, 242);
 	--color-icon: rgb(242, 242, 242);
 	--color-background: rgb(17, 17, 17);
-	--color-semitransparent: rgba(17, 17, 17, 0.95);
+	--color-semitransparent: rgba(17, 17, 17, 0.9);
 	--color-border: rgb(38, 38, 38);
 	--color-glow: var(--color-text);
 	--color-low-contrast: rgb(23, 23, 23);

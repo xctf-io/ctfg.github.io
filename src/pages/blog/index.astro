@@ -45,18 +45,18 @@ const postsWithRT = await getPostsWithRT(posts);
 							<p class="font-extralight text-xs xs:text-sm">
 								{post.data.description}
 							</p>
-							<p class="pt-2 font-light text-offset opacity-50 text-xs">
+							<p class="pt-2 font-light text-offset opacity-60 text-xs">
 								<Icon
-									class="mr-1 inline-block h-5 opacity-50"
+									class="mr-1 inline-block h-5 opacity-60"
 									name="mdi:calendar-clock"
 								/>
 								<FormattedDate date={post.data.pubDate} />
 								<Icon
-									class="ml-4 mr-1 inline-block h-5 opacity-50"
+									class="ml-4 mr-1 inline-block h-5 opacity-60"
 									name="mdi:clock-outline"
 								/>
 								<span>
-									{post.data.readingTime.slice(0, -5)}
+									{post.data.readingTime?.slice(0, -5)}
 								</span>
 							</p>
 						</div>
